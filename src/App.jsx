@@ -33,6 +33,7 @@ function App() {
 
   return (
     <div className="container"> 
+        <h1>Add People to Table</h1>
         <p className="subtitle">Enter Place, Name, and Age, then click Add.</p>
 
         <div className="form">
@@ -64,7 +65,8 @@ function App() {
        </div>
 
        {rows.length === 0 ? (
-           <div className="empty">No entries yet. Add your first row!</div>
+           <div className="empty">No entries yet</div>
+
        ): (
 
           <table>
@@ -76,7 +78,7 @@ function App() {
                   <th></th>
                </tr>
              </thead>
-             <tboby>
+             <tbody>
                 {rows.map((row, index) => (
                   <tr key={index}>
                     <td>{row.place}</td>
@@ -92,7 +94,7 @@ function App() {
                     </td>
                   </tr>
                 ))}
-             </tboby>
+             </tbody>
           </table>
        )}
     </div>
